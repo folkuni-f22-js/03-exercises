@@ -38,8 +38,8 @@ function f(x, y) {
 	// 6
 }
 
-console.log( 'F: ', f(1, 3) )
-console.log( 'F: ', f( f(10, 2), f(1, -2) ) )
+console.log('F: ', f(1, 3))
+console.log('F: ', f(f(10, 2), f(1, -2)))
 // f( f(10, 2), f(1, -2) )
 // f( (10 + 2 - 1) * 2, f(1, -2) )
 // f( 11 * 2, f(1, -2) )
@@ -51,5 +51,21 @@ console.log( 'F: ', f( f(10, 2), f(1, -2) ) )
 // (18 - 1) * 2
 // 17 * 2
 // 34
+
+
+// Alt + Shift + F för att formatera markerad kod
+let foo = function (i) {
+	return 2 * i * i;
+};
+let goo = function (x, y) {
+	return x(y);
+};
+let a = goo(foo, 3);
+// goo(foo, 3);
+// foo(3)
+// 2 * 3 * 3
+// 18
+console.log(a);
+
 
 console.log('Program end')
